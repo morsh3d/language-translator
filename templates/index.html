@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form method="POST">
+        <input name="text" required>
+        <button type="submit">Translate</button>
+    </form>
+    <p>{{ translation }}</p>
+    {% if audio_file %}
+    <audio controls>
+        <source src="{{ url_for('static', filename=audio_file) }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+</body>
+</html>
