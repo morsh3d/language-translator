@@ -1,4 +1,3 @@
-import glob
 import os
 from flask import Flask, request, render_template
 from french import translate_text
