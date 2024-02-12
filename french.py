@@ -15,7 +15,7 @@ def translate_text(model, tokenizer, input_text):
 
     # Convert the translated text to speech
     tts = gTTS(translated_text, lang='en')
-    audio_file = "audio.mp3"
+    audio_file = "static/audio.mp3"
     tts.save(audio_file)
 
     return translated_text, audio_file
