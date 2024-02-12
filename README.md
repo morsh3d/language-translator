@@ -25,7 +25,7 @@ pip install -r requirements.txt
 To use the project, run the Flask application with the following command:
 
 ```bash
-python app.py
+flask run
 ```
 
 Then, open a web browser and navigate to [http://localhost:5000](http://localhost:5000) (or the URL displayed in your terminal). Enter some text in French and click the "Translate" button to get the English translation and hear the translated text.
