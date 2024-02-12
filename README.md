@@ -8,7 +8,7 @@ This project uses the Hugging Face Transformers library to translate text to Eng
 
 - `app.py`: This script uses Flask to create a web application that provides a user interface for the functionality in `french.py`.
 
-- `tf_model.h5`: This is the Hugging Face model. You can find more details about it on [the Hugging Face website.](https://huggingface.co/google/mt5-base/blob/2e1532e3c3ac67f4e8ed3c4a4d95a2fa0d694fd3/tf_model.h5)
+- `tf_model.h5`: This is the Hugging Face model. You can find more details about it on [the Hugging Face website](https://huggingface.co/google/mt5-base/blob/2e1532e3c3ac67f4e8ed3c4a4d95a2fa0d694fd3/tf_model.h5).
 
 ## Languages supported
 The project currently supports French only. It is using Helsinki-NLP/opus-mt-fr-en model.
