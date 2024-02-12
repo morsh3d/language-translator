@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Translation App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Import a futuristic font */
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Use the futuristic font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d47a1; /* Futuristic blue background */
+            color: #fff; /* White text */
+        }
+        .container {
+            text-align: center;
+        }
+        .input-field {
+            width: 300px;
+            height: 30px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .translate-button {
+            padding: 10px 20px;
+            background-color: #1e88e5; /* Lighter blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .translate-button:hover {
+            background-color: #1565c0; /* Darker blue on hover */
+        }
+        .translation {
+            margin-top: 20px;
+            font-size: 20px;
+            background-color: #1e88e5; /* Lighter blue background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 <body>
-    <form method="POST">
-        <input name="text" required>
-        <button type="submit">Translate</button>
-    </form>
-    <p>{{ translation }}</p>
-    {% if audio_file %}
-    <audio controls>
-        <source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    {% endif %}
+    <div class="container">
+        <h1>Translation App</h1>
+        <p>Type your phrase or sentence into the box below:</p>
+        <form method="POST">
+            <input class="input-field" name="text" required>
+            <br>
+            <button class="translate-button" type="submit">Translate</button>
+        </form>
+        {% if translation %}
+        <div class="translation">
+            <p>Your translated text is:</p>
+            <p>{{ translation }}</p>
+        </div>
+        {% endif %}
+        {% if latest_audio_file %}
+        <audio controls>
+            <source src="{{ url_for('static', filename=latest_audio_file) }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        {% endif %}
+    </div>
 </body>
 </html>
