@@ -11,7 +11,7 @@ This project uses the Hugging Face Transformers library to translate text to Eng
 - `tf_model.h5`: This is the Hugging Face model. You can find more details about it on [the Hugging Face website](https://huggingface.co/google/mt5-base/blob/2e1532e3c3ac67f4e8ed3c4a4d95a2fa0d694fd3/tf_model.h5).
 
 ## Languages supported
-The project currently supports French only. It is using Helsinki-NLP/opus-mt-fr-en model.
+The project currently supports all Romance languages. It is using Helsinki-NLP/opus-mt-ROMANCE-en.
 
 ## Installation
 
@@ -28,7 +28,7 @@ To use the project, run the Flask application with the following command:
 flask run
 ```
 
-Then, open a web browser and navigate to [http://localhost:5000](http://localhost:5000) (or the URL displayed in your terminal). Enter some text in French and click the "Translate" button to get the English translation and hear the translated text.
+Then, open a web browser and navigate to [http://localhost:5000](http://localhost:5000) (or the URL displayed in your terminal). Enter some text in a Romance language and click the "Translate" button to get the English translation and hear the translated text.
 
 # How does french.py work?
 french.py is the heart of the translation code. This is a simple explanation of what is going on:
