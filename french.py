@@ -4,7 +4,7 @@ from datetime import datetime
 import io
 import os
 
-model_name = "Helsinki-NLP/opus-mt-fr-en"
+model_name = "Helsinki-NLP/opus-mt-ROMANCE-en"
 model = MarianMTModel.from_pretrained(model_name)
 tokenizer = MarianTokenizer.from_pretrained(model_name)
 
@@ -23,6 +23,6 @@ def translate_text(input_text):
     return translated_text, audio_file
 
 if __name__ == "__main__":
-    input_text = input("Enter some text in French: ")
+    input_text = input("Enter some text: ")
     translated_output, audio_file = translate_text(input_text)
     print("Translated text:", translated_output)
