@@ -1,8 +1,7 @@
 import unittest
 
-import test_fixtures_ro
 from french import translate_text
-from tests import test_fixtures_fr
+from tests import test_fixtures_fr, test_fixtures_ro
 
 
 class TestConversion(unittest.TestCase):
