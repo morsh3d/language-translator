@@ -1,5 +1,5 @@
 aesara==2.9.3
-aiohttp==3.9.3
+aiohttp>=3.9.4
 astunparse==1.6.3
 attr==0.3.2
 av==11.0.0
