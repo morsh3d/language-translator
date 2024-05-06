@@ -10,7 +10,7 @@ conda==4.3.16
 ConfigParser==6.0.0
 contextlib2==21.6.0
 coremltools==7.1
-cryptography==42.0.2
+cryptography>=42.0.4
 ctypes_snappy
 Cython==3.0.8
 defusedxml==0.7.1
